@@ -1,16 +1,3 @@
-* {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-}
-.reproductor{
-  /*Se define el reproductor a la derecha*/
-  position: fixed;
-  top: 20%;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  z-index: 9;
-}
 .contenido {
   background-color: #E7F1F9;
   text-align: center;
@@ -29,69 +16,78 @@
   padding-top: 30px;
 }
 
-.servicios {
-  background-color: whitesmoke;
-}
-
-.iconos {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-}
-
-.iconos div {
-  color: #00695c !important;
-}
-
-.contenedor {
-  margin: auto;
-  width: 600px;
-  height: 400px;
-}
-
-.carousel-caption {
-  position: absolute;
-  left: auto;
-  width: 55%;
-  height: 30%;
-  background-color: #428bca;
-  opacity: 0.9;
-  bottom: 0;
-  right: 0;
-  border-radius: 50%;
-}
-
-.textocarousel {
-  color: white !important;
-}
-
-.left {
-  left: 0%;
-}
-
-.iconos div {
-  margin-top: 20%;
-}
-
-.contenedor_mapa {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.botoncio {
-  color: white !important;
-  background-color: #428bca !important;
-}
-
-.botoncio:hover {
-  border-color: #428bca !important;
-  background-color: white !important;
-  color: #428bca !important;
+@media (max-width: 768px) {
+  .perrete img {
+    height: 400px;
+  }
+  .contenedor {
+    margin: auto;
+    width: 100%;
+    height: 500px;
+  }
+  iframe {
+    width: 400px;
+    height: 400px;
+  }
+  .iconoscategoria {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .iconoscategoria img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .icon-bar {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 9;
+  }
+  .contenido p {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 30px;
+  }
+  .cuentas div {
+    padding-right: 2px;
+  }
+  .movil {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .movil img {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  .contenidoservicios {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  .servicioderecha {
+    padding-right: 0px !important;
+    padding-left: 50px !important;
+  }
+  .barracategorias {
+    padding-left: 60px !important;
+  }
+  .carousel-caption {
+    visibility: hidden !important;
+  }
+  .carousel-item {
+    height: 231px !important;
+  }
 }
 
 /*HEADER*/
@@ -207,78 +203,15 @@ iframe {
   height: 450px;
 }
 
-@media (max-width: 768px) {
-  .perrete img {
-    height: 400px;
-  }
-  .contenedor {
-    margin: auto;
-    width: 100%;
-    height: 500px;
-  }
-  iframe {
-    width: 400px;
-    height: 400px;
-  }
-  .iconoscategoria {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-  }
-  .iconoscategoria img {
-    width: 60px !important;
-    height: 60px !important;
-  }
-  .icon-bar {
-    position: fixed;
-    top: 50%;
-    right: 0;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    z-index: 9;
-  }
-  .contenido p {
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 30px;
-  }
-  .cuentas div {
-    padding-right: 2px;
-  }
-  .movil {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-  }
-  .movil img {
-    width: 200px !important;
-    height: 200px !important;
-  }
-  .contenidoservicios {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-  }
-  .servicioderecha {
-    padding-right: 0px !important;
-    padding-left: 50px !important;
-  }
-  .barracategorias {
-    padding-left: 60px !important;
-  }
-  .carousel-caption {
-    visibility: hidden !important;
-  }
-  .carousel-item {
-    height: 231px !important;
-  }
+.botoncio {
+  color: white !important;
+  background-color: #428bca !important;
+}
+
+.botoncio:hover {
+  border-color: #428bca !important;
+  background-color: white !important;
+  color: #428bca !important;
 }
 
 /* TIENDA */
@@ -333,21 +266,6 @@ iframe {
   padding-bottom: 150px;
   color: #00695c;
   padding-top: 190px;
-}
-
-/* CONTACTO */
-.formulario {
-  background-color: #E7F1F9 !important;
-  padding-bottom: 150px;
-  color: #00695c;
-  margin-top: 176px;
-}
-
-.contenido2 {
-  background-color: #E7F1F9;
-  text-align: center;
-  padding-bottom: 150px;
-  color: #00695c;
 }
 
 /* Servicios */
@@ -409,5 +327,117 @@ iframe {
 
 .empuja {
   margin-top: 176px;
+}
+
+/* CONTACTO */
+.formulario {
+  background-color: #E7F1F9 !important;
+  padding-bottom: 150px;
+  color: #00695c;
+  margin-top: 176px;
+}
+
+.contenido2 {
+  background-color: #E7F1F9;
+  text-align: center;
+  padding-bottom: 150px;
+  color: #00695c;
+}
+
+.carousel-caption {
+  position: absolute;
+  left: auto;
+  width: 55%;
+  height: 30%;
+  background-color: #428bca;
+  opacity: 0.9;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+}
+
+.textocarousel {
+  color: white !important;
+}
+
+.left {
+  left: 0%;
+}
+
+.posicion {
+  padding-left: 40%;
+}
+
+.carousel-galeria {
+  border-style: solid;
+  width: 300px;
+  height: 300px;
+}
+
+.carousel-galeria div {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.carousel-galeria div img {
+  height: 300px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.servicios {
+  background-color: whitesmoke;
+}
+
+.iconos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.iconos div {
+  color: #00695c !important;
+}
+
+.contenedor {
+  margin: auto;
+  width: 600px;
+  height: 400px;
+}
+
+.iconos div {
+  margin-top: 20%;
+}
+
+.contenedor_mapa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login {
+  background-color: #E7F1F9;
+  padding-bottom: 150px;
+  color: #00695c;
+  margin-top: 176px;
+}
+
+.login * {
+  color: #00695c;
+}
+
+.login p {
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 30px;
 }
 /*# sourceMappingURL=principal.css.map */

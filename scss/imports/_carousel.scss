@@ -17,3 +17,23 @@
   .left {
     left: 0%;
   }
+  .posicion{
+    padding-left: 40%;
+  }
+  .carousel-galeria{
+    border-style: solid;
+    width:300px;
+    height: 300px;
+    
+    
+    div{
+      max-width: 100%;
+      max-height: 100%;
+      img{
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+      }
+    }
+  }
+  
