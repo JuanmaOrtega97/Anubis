@@ -43,3 +43,15 @@
     color: $verde;
     padding-top: 190px;
   }
+  .botonciotienda {
+    color: white !important;
+    background-color: $verde !important;
+    border-radius: 40px;
+  }
+  
+  .botoncio:hover {
+    border-color: $verde !important;
+    background-color: white !important;
+    color: $verde !important;
+  }
+  

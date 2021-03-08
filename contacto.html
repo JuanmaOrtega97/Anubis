@@ -61,8 +61,22 @@
     </nav>
 
     
+    <script>
+        function validarFormulario() {
+            
+          var elementos= document.getElementsByClassName("campos");
+          var relleno=true;
+          for(i=0;i<elementos.length;i++){
 
-    <form  class="formulario" style="padding: 50px;">
+              var elemento=elementos[i];
+              if(elemento.value==""){
+                  alert("Por favor, rellene el: " + elemento.getAttribute("name"));
+              }
+          }
+
+        }
+    </script>
+    <form  class="formulario" name="formulario" onsubmit="return validarFormulario()" style="padding: 50px;">
         <h4>¡Puedes contactar con nosotros para pedir cita o para cualquier duda que puedas tener!</h4>
         
         <br>
@@ -92,39 +106,40 @@
         <div class="form-row" >
           <div class="form-group col-md-4">
             <label >Nombre</label>
-            <input type="text" class="form-control" id="inputEmail4" placeholder="...">
+            <input type="text"  name="Nombre" class="form-control campos" id="nombre" placeholder="..."/>
           </div>
           <div class="form-group col-md-2"></div>
           <div class="form-group col-md-4">
-            <label for="inputPassword4">Apellidos</label>
-            <input type="text" class="form-control" id="inputPassword4" placeholder="...">
+            <label for="apellidos">Apellidos</label>
+            <input type="text"  name="Apellidos" class="form-control campos" id="apellidos" placeholder="..."/>
           </div>
         </div>
         <div class="form-row">
         <div class="form-group col-md-4" >
-          <label for="inputAddress" >Numero de telefono</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="...">
+          <label for="telefono" >Numero de telefono</label>
+          <input type="text" name="Numero de Telefono" class="form-control campos" pattern="[0-9]*" id="teleofno" placeholder=" Formato: 698564238">
         </div>
         <div class="form-group col-md-2"></div>
         <div class="form-group col-md-4 ">
-          <label for="inputAddress2">Correo electronico</label>
-          <input type="email" class="form-control" id="inputAddress2" placeholder="loquesa@servidor.com/es">
+          <label for="correo">Correo electronico</label>
+          <input type="email" name="Correo" class="form-control campos" id="correo" placeholder="loquesa@servidor.com/es">
         </div>
     </div>
         <div class="form-row">
           <div class="form-group col-md-4">
-            <label for="inputCity">Asunto</label>
-            <input type="text" class="form-control" id="inputCity" placeholder="Escriba el motivo de su consulta">
+            <label for="asunto">Asunto</label>
+            <input type="text" name="Asunto" class="form-control campos" id="asunto" placeholder="Escriba el motivo de su consulta">
           </div>
           <div class="form-group col-md-2"></div>
           <div class="form-group col-md-4">
-            <label for="inputState">Motivo de contacto</label>
-            <select id="inputState" class="form-control">
+            <label for="motivos">Motivo de contacto  *</label>
+            <select id="motivos" class="form-control">
               <option selected>Selecciona</option>
               <option>Cita previa</option>
               <option>Consulta / dudas</option>
               <option>Urgencia</option>
             </select>
+            
           </div>
         
         </div>
@@ -140,6 +155,7 @@
         <br> 
         
       </form>
+     
      
       <div class="contenido2 ">
         <iframe
